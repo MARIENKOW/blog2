@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "paths": {
+            "baseUrl": ["."],
+            "@/*": ["./src/*"]
+
+            // "@hooks/*": ["./src/hooks/*"],
+            // "@lib/*": ["./src/lib/*"],
+            // Other alias configurations
+        }
+    }
+}
