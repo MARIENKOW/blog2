@@ -46,7 +46,8 @@ export default async function Lists() {
                             <TableRow
                                 key={row.id}
                                 sx={{
-                                    bgcolor: i % 2 ? "" : "#bdbdbd",
+                                    bgcolor: "#bdbdbd",
+                                    // bgcolor: i % 2 ? "" : "#bdbdbd",
                                     "&:last-child td, &:last-child th": {
                                         border: 0,
                                     },
