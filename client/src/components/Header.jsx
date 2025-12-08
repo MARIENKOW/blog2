@@ -101,7 +101,7 @@ const Header = ({ data }) => {
                                 maxWidth={"100%"}
                                 pt={1}
                                 pb={1}
-                                gap={2}
+                                gap={1}
                             >
                                 {/* {data && data?.length !== 0 ? (
                                     <>
