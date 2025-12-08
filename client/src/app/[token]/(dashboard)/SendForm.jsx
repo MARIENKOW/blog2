@@ -202,7 +202,7 @@ export default function SendForm() {
                             <Grid2 size={{ xs: 12, md: 5 }}>
                                 <StyledTab>
                                     <StyledTyB>Телефон :</StyledTyB>
-                                    <StyledTyG>049876744</StyledTyG>
+                                    <StyledTyG>035200089</StyledTyG>
                                 </StyledTab>
                                 <StyledTab>
                                     <StyledTyB>Факс :</StyledTyB>
@@ -212,7 +212,7 @@ export default function SendForm() {
                                     <StyledTyB>
                                         Телефон защищенной линии :
                                     </StyledTyB>
-                                    <StyledTyG></StyledTyG>
+                                    <StyledTyG>0531970444</StyledTyG>
                                 </StyledTab>
                                 <StyledTab>
                                     <StyledTyB>Адрес :</StyledTyB>
@@ -716,7 +716,7 @@ export default function SendForm() {
                                             },
                                         }}
                                         // label="Описание"
-                                        helper={true}
+                                        // helper={true}
                                     />
                                 </Box>
                             </Grid2>
