@@ -28,11 +28,11 @@ export default function Page() {
                         Новости
                     </Button>
                 </Link> */}
-                <Link href={ADMIN_PHONE_ROUTE}>
+                {/* <Link href={ADMIN_PHONE_ROUTE}>
                     <Button fullWidth variant="contained" color="primary">
                         контакты
                     </Button>
-                </Link>
+                </Link> */}
                 <Link href={ADMIN_LIST_ROUTE}>
                     <Button fullWidth variant="contained" color="primary">
                         адреса

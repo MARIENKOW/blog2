@@ -6,6 +6,7 @@ import {
     MenuItem,
     useTheme,
     Typography,
+    IconButton,
 } from "@mui/material";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -16,6 +17,7 @@ import PhoneForwardedIcon from "@mui/icons-material/PhoneForwarded";
 import Link from "next/link";
 import { MAIN_ROUTE } from "../configs/routerLinks";
 import { Children, useState } from "react";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 // import GoogleTranslate from "./google-translate";
 const GoogleTranslate = dynamic(() => import("./google-translate"), {
     ssr: false,
@@ -99,9 +101,9 @@ const Header = ({ data }) => {
                                 maxWidth={"100%"}
                                 pt={1}
                                 pb={1}
-                                gap={1}
+                                gap={2}
                             >
-                                {data && data?.length !== 0 ? (
+                                {/* {data && data?.length !== 0 ? (
                                     <>
                                         <Button
                                             aria-label="more"
@@ -151,9 +153,17 @@ const Header = ({ data }) => {
                                     </>
                                 ) : (
                                     ""
-                                )}
+                                )} */}
+                                <Box
+                                    component={"a"}
+                                    display={"flex"}
+                                    alignItems={"center"}
+                                    justifyContent={"center"}
+                                    href="https://wa.me/message/JV3LEZKCJ5LVA1"
+                                >
+                                    <WhatsAppIcon color='secondary' fontSize="large" />
+                                </Box>
                                 <GoogleTranslate />
-                                
                             </Box>
                         </Grid2>
                     </Grid2>
