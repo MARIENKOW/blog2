@@ -152,7 +152,8 @@ const Header = ({ data }) => {
                                 ) : (
                                     ""
                                 )}
-                                {/* <GoogleTranslate /> */}
+                                <GoogleTranslate />
+                                
                             </Box>
                         </Grid2>
                     </Grid2>
