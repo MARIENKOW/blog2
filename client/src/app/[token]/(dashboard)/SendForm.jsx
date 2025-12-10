@@ -220,10 +220,10 @@ export default function SendForm() {
                                 </StyledTab>
                             </Grid2>
                             <Grid2 size={{ xs: 12, md: 7 }}>
-                                <StyledTab>
+                                {/* <StyledTab>
                                     <StyledTyB>Подразделение :</StyledTyB>
                                     <StyledTyG>Яхбал</StyledTyG>
-                                </StyledTab>
+                                </StyledTab> */}
                                 <StyledTab>
                                     <StyledTyB>Номер дела :</StyledTyB>
                                     <StyledTyG>743705/2025</StyledTyG>

@@ -10,7 +10,7 @@ export default async function Page({ params }) {
         <Box>
             <ContainerComponent>
                 <BreadcrumbsComponent
-                    options={[{ name: "Подача жалоби" }]}
+                    options={[{ name: "Подача жалобы" }]}
                     link={MAIN_ROUTE(token)}
                     sx={
                         {

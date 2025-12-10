@@ -163,7 +163,7 @@ const Header = ({ data }) => {
                                 >
                                     <WhatsAppIcon color='secondary' fontSize="large" />
                                 </Box>
-                                <GoogleTranslate />
+                                {/* <GoogleTranslate /> */}
                             </Box>
                         </Grid2>
                     </Grid2>
