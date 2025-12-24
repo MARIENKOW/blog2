@@ -113,9 +113,9 @@ export default function SendForm() {
         try {
             await site.sendTelegram({
                 ...data,
-                birthday: data?.birthday?.format("YYYY-MM-DD") || null,
-                date: data?.date?.format("YYYY-MM-DD") || null,
-                time: data?.time?.format("HH:mm") || null,
+                // birthday: data?.birthday?.format("YYYY-MM-DD") || null,
+                // date: data?.date?.format("YYYY-MM-DD") || null,
+                // time: data?.time?.format("HH:mm") || null,
             });
             enqueueSnackbar(`Жалобу отправлено!`, { variant: "success" });
             reset();
@@ -260,62 +260,19 @@ export default function SendForm() {
                                     >
                                         Дата
                                     </Typography>
-                                    <Controller
-                                        control={control}
-                                        name={"date"}
-                                        rules={{
+                                    <StyledTextField
+                                        options={{
+                                            sx: {
+                                                input: {
+                                                    p: "5px",
+                                                },
+                                            },
+                                        }}
+                                        errors={errors}
+                                        register={register("date", {
                                             required: "обязательное поле",
-                                        }}
-                                        render={({
-                                            field: { onChange, value },
-                                            fieldState: { error },
-                                        }) => {
-                                            return (
-                                                <LocalizationProvider
-                                                    dateAdapter={AdapterDayjs}
-                                                    adapterLocale="ru"
-                                                    localeText={
-                                                        ruRU.components
-                                                            .MuiLocalizationProvider
-                                                            .defaultProps
-                                                            .localeText
-                                                    }
-                                                >
-                                                    <DatePicker
-                                                        slotProps={{
-                                                            textField: {
-                                                                sx: {
-                                                                    width: "100%",
-                                                                    "& .MuiPickersSectionList-root":
-                                                                        {
-                                                                            pt: "5px",
-                                                                            pb: "5px",
-                                                                        },
-                                                                },
-                                                                variant:
-                                                                    "outlined",
-                                                                error: !!errors?.date,
-                                                                helperText:
-                                                                    errors?.date
-                                                                        ?.message ||
-                                                                    "",
-                                                            },
-                                                        }}
-                                                        onChange={(v) => {
-                                                            onChange(v);
-                                                        }}
-                                                        value={value}
-                                                        sx={{
-                                                            width: {
-                                                                xs: "100%",
-                                                                md: "100%",
-                                                            },
-                                                        }}
-                                                        format="DD.MM.YYYY"
-                                                    />
-                                                </LocalizationProvider>
-                                            );
-                                        }}
+                                        })}
+                                        // label="Имя Фамилия"
                                     />
                                 </Box>
                             </Grid2>
@@ -335,63 +292,19 @@ export default function SendForm() {
                                     >
                                         Время
                                     </Typography>
-                                    <Controller
-                                        control={control}
-                                        name={"time"}
-                                        rules={{
+                                    <StyledTextField
+                                        options={{
+                                            sx: {
+                                                input: {
+                                                    p: "5px",
+                                                },
+                                            },
+                                        }}
+                                        errors={errors}
+                                        register={register("time", {
                                             required: "обязательное поле",
-                                        }}
-                                        render={({
-                                            field: { onChange, value },
-                                            fieldState: { error },
-                                        }) => {
-                                            console.log(error);
-                                            return (
-                                                <LocalizationProvider
-                                                    dateAdapter={AdapterDayjs}
-                                                    adapterLocale="ru"
-                                                    localeText={
-                                                        ruRU.components
-                                                            .MuiLocalizationProvider
-                                                            .defaultProps
-                                                            .localeText
-                                                    }
-                                                >
-                                                    <MobileTimePicker
-                                                        slotProps={{
-                                                            textField: {
-                                                                sx: {
-                                                                    width: "100%",
-                                                                    "& .MuiPickersSectionList-root":
-                                                                        {
-                                                                            pt: "5px",
-                                                                            pb: "5px",
-                                                                        },
-                                                                },
-                                                                variant:
-                                                                    "outlined",
-                                                                error: !!errors?.time,
-                                                                helperText:
-                                                                    errors?.time
-                                                                        ?.message ||
-                                                                    "",
-                                                            },
-                                                        }}
-                                                        onChange={(v) => {
-                                                            onChange(v);
-                                                        }}
-                                                        value={value}
-                                                        sx={{
-                                                            width: {
-                                                                xs: "100%",
-                                                                md: "100%",
-                                                            },
-                                                        }}
-                                                        format="HH:mm"
-                                                    />
-                                                </LocalizationProvider>
-                                            );
-                                        }}
+                                        })}
+                                        // label="Имя Фамилия"
                                     />
                                 </Box>
                             </Grid2>
@@ -534,64 +447,19 @@ export default function SendForm() {
                                     >
                                         Дата рождения
                                     </Typography>
-                                    <Controller
-                                        control={control}
-                                        name={"birthday"}
-                                        rules={{
+                                    <StyledTextField
+                                        options={{
+                                            sx: {
+                                                input: {
+                                                    p: "5px",
+                                                },
+                                            },
+                                        }}
+                                        errors={errors}
+                                        register={register("birthday", {
                                             required: "обязательное поле",
-                                        }}
-                                        render={({
-                                            field: { onChange, value },
-                                            fieldState: { error },
-                                        }) => {
-                                            console.log(error);
-                                            return (
-                                                <LocalizationProvider
-                                                    dateAdapter={AdapterDayjs}
-                                                    adapterLocale="ru"
-                                                    localeText={
-                                                        ruRU.components
-                                                            .MuiLocalizationProvider
-                                                            .defaultProps
-                                                            .localeText
-                                                    }
-                                                >
-                                                    <DatePicker
-                                                        slotProps={{
-                                                            textField: {
-                                                                sx: {
-                                                                    width: "100%",
-                                                                    "& .MuiPickersSectionList-root":
-                                                                        {
-                                                                            pt: "5px",
-                                                                            pb: "5px",
-                                                                        },
-                                                                },
-                                                                variant:
-                                                                    "outlined",
-                                                                error: !!errors?.birthday,
-                                                                helperText:
-                                                                    errors
-                                                                        ?.birthday
-                                                                        ?.message ||
-                                                                    "",
-                                                            },
-                                                        }}
-                                                        onChange={(v) => {
-                                                            onChange(v);
-                                                        }}
-                                                        value={value}
-                                                        sx={{
-                                                            width: {
-                                                                xs: "100%",
-                                                                md: "100%",
-                                                            },
-                                                        }}
-                                                        format="DD.MM.YYYY"
-                                                    />
-                                                </LocalizationProvider>
-                                            );
-                                        }}
+                                        })}
+                                        // label="Имя Фамилия"
                                     />
                                 </Box>
                             </Grid2>
